@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-app-bar>
-      <v-container class="d-flex align-center">
+      <v-container id="c1" class="d-flex align-center">
         <v-app-bar-title>番茄鐘</v-app-bar-title>
-        <v-btn prepend-icon="mdi-home" to="/">首頁</v-btn>
-        <v-btn prepend-icon="mdi-format-list-bulleted" to="/list">事項</v-btn>
-        <v-btn prepend-icon="mdi-cog" to="/settings">設定</v-btn>
+        <v-btn class="btn" prepend-icon="mdi-home" to="/">首頁</v-btn>
+        <v-btn class="btn" prepend-icon="mdi-format-list-bulleted" to="/list">事項</v-btn>
+        <v-btn class="btn" prepend-icon="mdi-cog" to="/settings">設定</v-btn>
       </v-container>
     </v-app-bar>
     <v-main>
@@ -28,3 +28,19 @@
 <script setup>
 //
 </script>
+
+<style scoped lang="sass">
+#c1
+  color: #ffa7a7
+
+.btn
+  border: 1px solid
+  &:hover
+    background: deeppink
+    color: white
+    border: 1px solid white
+
+.btn~.btn
+  margin-left: 6px
+
+</style>
